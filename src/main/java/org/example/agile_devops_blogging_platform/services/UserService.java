@@ -3,8 +3,6 @@ package org.example.agile_devops_blogging_platform.services;
 import org.example.agile_devops_blogging_platform.entities.User;
 import org.example.agile_devops_blogging_platform.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 
 @Service
 public class UserService {
@@ -14,7 +12,6 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    @Transactional
     public User createUser(User user) {
         if (userRepository.existsByUsername(user.getUsername())) {
             throw new RuntimeException("Username already exists");
