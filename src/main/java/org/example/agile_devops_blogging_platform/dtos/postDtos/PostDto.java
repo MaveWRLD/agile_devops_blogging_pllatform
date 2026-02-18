@@ -11,12 +11,10 @@ public record PostDto(
         String body,
         Instant createdAt,
         Instant updatedAt,
-        String excerpt,
         Instant publishedAt,
         Integer likeCount,
         Integer viewCount,
         Integer commentCount,
-        PostStatus status,
         Long userId,
         String author
 ) {}
