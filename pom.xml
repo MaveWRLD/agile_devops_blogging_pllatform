@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>agile_devops_blogging_pllatform</artifactId>
+    <artifactId>agile_devops_blogging_platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>agile_devops_blogging_pllatform</name>
     <description>agile_devops_blogging_pllatform</description>
