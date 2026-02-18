@@ -1,5 +1,4 @@
 # src/test/resources/application.yml
-# This overrides ONLY for tests → prevents DataSource/JPA auto-config from running
 
 spring:
   autoconfigure:
@@ -8,7 +7,6 @@ spring:
       - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
       - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
 
-  # Still good to have these
   jpa:
     hibernate:
       ddl-auto: none
