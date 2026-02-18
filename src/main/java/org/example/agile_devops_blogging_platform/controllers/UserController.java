@@ -1,10 +1,8 @@
 package org.example.agile_devops_blogging_platform.controllers;
 
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.agile_devops_blogging_platform.dtos.userDtos.CreateUserRequest;
 import org.example.agile_devops_blogging_platform.dtos.userDtos.UserDto;
-import org.example.agile_devops_blogging_platform.entities.User;
 import org.example.agile_devops_blogging_platform.mappers.UserMapper;
 import org.example.agile_devops_blogging_platform.services.UserService;
 import org.springframework.http.HttpStatus;
@@ -21,12 +19,10 @@ public class UserController {
     private final UserMapper userMapper;
 
     @PostMapping
-    public ResponseEntity<UserDto> createUser(
-            @Valid @RequestBody CreateUserRequest request) {
+    public ResponseEntity<UserDto> registerUser(
+            @RequestBody CreateUserRequest request) {
 
-        User user = userMapper.toEntity(request);
-
-        userService.createUser(user);
+        var user = userService.createUser(userMapper.toEntity(request));
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
