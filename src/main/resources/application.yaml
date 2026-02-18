@@ -1,6 +1,6 @@
 spring:
   application:
-    name: agile_devops_blogging_pllatform
+    name: agile_devops_blogging_platform
 
   graphql:
     graphiql:
